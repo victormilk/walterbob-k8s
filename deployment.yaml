@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: walterbob
+  labels:
+    app: walterbob
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: walterbob
+  template:
+    metadata:
+      name: walterbob
+      labels:
+        app: walterbob
+    spec:
+      containers:
+        - name: walterbob
+          image: victormilk/walterbob
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+      
