@@ -5,8 +5,8 @@ resources:
   - deployment.yaml
   - service.yaml
 
-namespace: walterbob-dev
+namespace: walterbob
 
 images:
   - name: victormilk/walterbob
-    newTag: c1a112ea3551b60c84078aa49ffee9e3657f7f43
+    newTag: latest
