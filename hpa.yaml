@@ -7,9 +7,9 @@ metadata:
     app: walterbob
 spec:
   scaleTargetRef:
+    apiVersion: apps/v1
     kind: Deployment
     name: walterbob
-    apiVersion: apps/v1beta2
   minReplicas: 1
   maxReplicas: 4
   metrics:
