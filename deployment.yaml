@@ -22,7 +22,7 @@ spec:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /works
               port: 8080
             initialDelaySeconds: 15
             periodSeconds: 10
@@ -37,4 +37,9 @@ spec:
             successThreshold: 1
             failureThreshold: 2
       restartPolicy: Always
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
       

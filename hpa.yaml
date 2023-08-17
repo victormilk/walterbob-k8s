@@ -1,0 +1,24 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: walterbob-hpa
+  namespace: walterbob-dev
+  labels:
+    app: walterbob
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: walterbob
+    apiVersion: apps/v1beta2
+  minReplicas: 1
+  maxReplicas: 4
+  metrics:
+
+    - type: Resource
+      resource:
+        name: memory
+        targetAverageUtilization: 80
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: 80
