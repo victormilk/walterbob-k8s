@@ -20,5 +20,17 @@ spec:
           image: victormilk/walterbob
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /works
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /works
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
       restartPolicy: Always
       
