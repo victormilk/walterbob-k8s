@@ -14,6 +14,10 @@ spec:
       name: walterbob
       labels:
         app: walterbob
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
     spec:
       containers:
         - name: walterbob
