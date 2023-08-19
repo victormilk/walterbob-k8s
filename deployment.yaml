@@ -14,14 +14,17 @@ spec:
       name: walterbob
       labels:
         app: walterbob
-  resources:
-    requests:
-      cpu: 100m
-      memory: 128Mi
     spec:
       containers:
         - name: walterbob
           image: victormilk/walterbob
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
           ports:
             - containerPort: 8080
           livenessProbe:
