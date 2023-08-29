@@ -5,7 +5,7 @@ metadata:
   labels:
     app: walterbob
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -22,10 +22,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 512Mi
+              memory: 1024Mi
             requests:
-              cpu: 200m
-              memory: 256Mi
+              cpu: 400m
+              memory: 512Mi
           ports:
             - containerPort: 8080
           livenessProbe:
