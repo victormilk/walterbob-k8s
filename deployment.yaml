@@ -34,18 +34,18 @@ spec:
               port: 8080
             initialDelaySeconds: 25
             periodSeconds: 10
-            timeoutSeconds: 0
+            timeoutSeconds: 5
             successThreshold: 1
-            failureThreshold: 2
+            failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
               port: 8080
             initialDelaySeconds: 25
             periodSeconds: 10
-            timeoutSeconds: 0
+            timeoutSeconds: 5
             successThreshold: 1
-            failureThreshold: 2
+            failureThreshold: 3
       restartPolicy: Always
   strategy:
     type: RollingUpdate
