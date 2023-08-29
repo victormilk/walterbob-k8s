@@ -10,4 +10,4 @@ namespace: walterbob-dev
 
 images:
   - name: victormilk/walterbob
-    newTag: 0c4c55f06085d8ce474ec9e340316bce17fe0210
+    newTag: 172cc3d9347d9f1cec8ead629e0f87b1dde9808c
