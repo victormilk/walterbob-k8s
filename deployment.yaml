@@ -6,6 +6,7 @@ metadata:
     app: walterbob
 spec:
   replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: walterbob
@@ -31,18 +32,18 @@ spec:
             httpGet:
               path: /actuator/health/liveness
               port: 8080
-            initialDelaySeconds: 50
+            initialDelaySeconds: 25
             periodSeconds: 10
-            timeoutSeconds: 10
+            timeoutSeconds: 0
             successThreshold: 1
             failureThreshold: 2
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
               port: 8080
-            initialDelaySeconds: 50
+            initialDelaySeconds: 25
             periodSeconds: 10
-            timeoutSeconds: 10
+            timeoutSeconds: 0
             successThreshold: 1
             failureThreshold: 2
       restartPolicy: Always
