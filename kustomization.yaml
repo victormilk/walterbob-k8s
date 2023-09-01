@@ -10,4 +10,4 @@ namespace: walterbob
 
 images:
   - name: victormilk/walterbob
-    newTag: 127a82ec9d1a1ccc340a6f75dfc2125d88c167e2
+    newTag: 8eabb8b8a63b22b9f186e08d9c1a4992707d67c2
