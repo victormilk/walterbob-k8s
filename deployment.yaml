@@ -21,10 +21,10 @@ spec:
           image: victormilk/walterbob
           resources:
             limits:
-              cpu: 500m
+              cpu: 1000m
               memory: 1024Mi
             requests:
-              cpu: 400m
+              cpu: 500m
               memory: 512Mi
           ports:
             - containerPort: 8080
